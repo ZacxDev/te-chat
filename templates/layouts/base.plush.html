@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= if (title != "") { %><%= title %> | <% } %> | TradingeconomicsChat</title>
+    <meta name="description" content="<%= description %>">
+    <link rel="canonical" href="<%= canonical %>" />
+
+    <!-- Language Alternates -->
+    <%= for (supportedLang) in supportedLangs { %>
+        <% let langPath = replace(currentPath, "/" + lang + "/", "/" + supportedLang + "/") %>
+        <link rel="alternate" hreflang="<%= supportedLang %>" href="<%= appOrigin + langPath %>" />
+    <% } %>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= appOrigin %>">
+    <meta property="og:title" content="<%= if (title != "") { %><%= title %> - <% } %>TradingeconomicsChat.com">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="<%= appOrigin %>/static/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= appOrigin %>">
+    <meta property="twitter:title" content="<%= if (title != "") { %><%= title %> - <% } %>TradingeconomicsChat.com">
+    <meta property="twitter:description" content="<%= description %>">
+    <meta property="twitter:image" content="<%= appOrigin %>/static/images/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/static/icons/site.webmanifest">
+
+    <!-- Styles -->
+    <link href="/static/output.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <%= for (src) in esbuild_bundle_paths { %>
+        <script defer src="<%= src %>"></script>
+    <% } %>
+
+</head>
+
+<body class="bg-white text-gray-900 dark:text-gray-100 min-h-screen flex flex-col" x-data="{ mobileMenuOpen: false }">
+
+    <main class="">
+        <%= yield %>
+    </main>
+
+</body>
+</html>

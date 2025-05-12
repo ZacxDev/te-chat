@@ -1,0 +1,18 @@
+# Navigation
+home: "Home"
+about: "About"
+blog: "Blog"
+contact: "Contact"
+my_clips: "My Clips"
+creators: "Creators"
+
+# Miscellaneous
+loading: "Loading..."
+error_occurred: "An error occurred. Please try again."
+save: "Save"
+cancel: "Cancel"
+edit: "Edit"
+delete: "Delete"
+confirm: "Confirm"
+yes: "Yes"
+no: "No"

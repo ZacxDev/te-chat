@@ -1,0 +1,18 @@
+# Navigation
+home: "Inicio"
+about: "Acerca de"
+blog: "Blog"
+contact: "Contacto"
+get_started: "Comienza Gratis"
+create_my_page: "Crea Mi Pagina"
+
+# Common phrases
+read_more: "Leer Más"
+learn_more: "Aprende Más"
+view_all: "Ver Todo"
+submit: "Enviar"
+cancel: "Cancelar"
+save: "Guardar"
+delete: "Eliminar"
+edit: "Editar"
+update: "Actualizar"

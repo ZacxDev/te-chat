@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@source "./src";
+@plugin "daisyui" {
+ themes: dim --prefersdark, valentine --default;
+}
+
+.chat-bubble > * {
+  @apply mb-2
+}
+
+@theme {
+  --animate-pulseShadow: pulseShadow 3s infinite ease-in-out;
+  @keyframes pulseShadow {
+    0%, 100% {
+      box-shadow: 0 0 0px rgb(255 121 198 / 100%);
+    }
+    50% {
+      box-shadow: 0 0 20px rgb(255 121 198 / 60%);
+    }
+  }
+}
+
+.chat-bubble pre {
+  @apply bg-base-100 py-4 overflow-x-auto
+}
