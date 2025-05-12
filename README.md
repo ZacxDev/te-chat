@@ -12,5 +12,6 @@ go get -u https://github.com/ZacxDev/go-static-site
 
 # TE Agent
 
-The TE ChatBot must be running, see https://github.com/ZacxDev/te-agent for setup instructions.
+- The TE Agent must be running, see https://github.com/ZacxDev/te-agent for setup instructions.
+- Update the ip/port used in `src/components/ChatApp.ts#connectSocket` to match where your TE Agent host is running
 
